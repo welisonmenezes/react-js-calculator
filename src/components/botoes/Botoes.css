@@ -1,0 +1,16 @@
+.botoes > div {
+    display: flex;
+    justify-content: space-between;
+}
+.botoes > div .botao:last-child {
+    margin-right: 0;
+}
+.botoes > div:last-child .botao {
+    margin-bottom: 0;
+}
+
+@media (max-width: 500px) {
+    .botoes > div .botao:first-child {
+        margin-left: 0;
+    }
+}
