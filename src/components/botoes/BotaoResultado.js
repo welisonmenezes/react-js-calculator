@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from './../../contexts/AppContext';
+import { naoNumeros } from './../../utils/Utils';
 import "./Botao.css";
 
 function BotaoResultado() {
@@ -9,15 +10,12 @@ function BotaoResultado() {
     const [numeros, setNumeros] = mNumeros;
 
     function mostrarResultado(event) {
-        const naoNumeros = ['+', '-', '×', '÷','.', '=', 'C', 'CE', '=/-'];
-        let tempDigito = digito;
-
         // se resultado ainda não foi requerido
-        if (tempDigito !== '=') {
+        if (digito !== '=') {
     
             // se é número válido, atualizar array de números
-            if (! naoNumeros.includes(tempDigito)) {
-                setNumeros([...numeros, tempDigito]);
+            if (! naoNumeros.includes(digito)) {
+                setNumeros([...numeros, digito]);
             }
 
             setDigito(event.target.innerHTML);

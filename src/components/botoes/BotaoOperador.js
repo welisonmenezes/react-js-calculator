@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from './../../contexts/AppContext';
+import { operadoresValidos } from './../../utils/Utils';
 import "./Botao.css";
 
 function BotaoOperador(props) {
@@ -11,7 +12,6 @@ function BotaoOperador(props) {
 
     // Captura o operador digitado
     function digitarOperador(event) {
-        const operadoresValidos = ['+', '-', '×', '÷'];
         let tempDigito = digito;
 
         // se dígito atual ainda não existe ou já é operador, operador não é necessário

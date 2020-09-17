@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from './../../contexts/AppContext';
+import { operadoresValidos } from './../../utils/Utils';
 import "./Botao.css";
 
 function BotaoNumero(props) {
@@ -11,7 +12,6 @@ function BotaoNumero(props) {
     const setResultado = mResultado[1];
 
     function digitarNumero(event) {
-        const operadoresValidos = ['+', '-', '×', '÷'];
         let tempDigito = digito;
 
         // permitir apenas um ponto (.) no dígito atual
@@ -41,8 +41,10 @@ function BotaoNumero(props) {
             tempDigito = '0' + event.target.innerHTML;
         }  
 
-        setDigito(tempDigito);
-        setResultado(tempDigito);
+        setTimeout(() => {
+            setDigito(tempDigito);
+            setResultado(tempDigito);
+        }, 1);
     }
 
     return (

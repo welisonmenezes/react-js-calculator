@@ -1,3 +1,7 @@
+export const operadoresValidos = ['+', '-', '×', '÷'];
+
+export const naoNumeros = operadoresValidos.concat(['.', '=', 'C', 'CE', '=/-']);
+
 export const posicionarScrollbar = () => {
     const $display = document.querySelector('.display'),
     $historico = document.querySelector('.historico');

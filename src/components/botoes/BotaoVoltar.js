@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from './../../contexts/AppContext';
+import { operadoresValidos } from './../../utils/Utils';
 import "./Botao.css";
 
 function BotaoVoltar() {
@@ -9,7 +10,6 @@ function BotaoVoltar() {
     const setResultado = mResultado[1];
 
     function voltarDigito() {
-        const operadoresValidos = ['+', '-', '×', '÷'];
         let tempDigito = digito;
 
         // se resultado já foi requerido, faça nada
