@@ -41,10 +41,8 @@ function BotaoNumero(props) {
             tempDigito = '0' + event.target.innerHTML;
         }  
 
-        setTimeout(() => {
-            setDigito(tempDigito);
-            setResultado(tempDigito);
-        },1);
+        setDigito(tempDigito);
+        setResultado(tempDigito);
     }
 
     return (
