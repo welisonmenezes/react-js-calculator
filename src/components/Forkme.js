@@ -4,10 +4,11 @@ import "./Forkme.css";
 
 function Forkme() {
     return (
-        <div class="forkme">
+        <div className="forkme">
             <a
                 href="https://github.com/welisonmenezes/react-js-calculator"
                 target="_blank"
+                rel="noopener noreferrer"
                 title="React Js Calculator - Github Welison Menezes"
             >
                 Fork me on GitHub
